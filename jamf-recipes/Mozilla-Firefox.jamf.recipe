@@ -3,30 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Firefox and makes a pkg.
+	<string>Downloads the latest version of Firefox, creats a pkg out of it and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
-	<string>com.github.jherrinjr.jamf.Firefox</string>
+	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>None</string>
+		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>AllDevices</string>
+		<string>AllComputers</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroup-AllDevices.xml</string>
+		<string>SmartGroup-AllComputers.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install</string>
 		<key>NAME</key>
-		<string>Firefox</string>
+		<string>Mozilla Firefox</string>
 		<key>POLICY_CATEGORY</key>
-		<string>None</string>
+		<string>AutoPKG</string>
 		<key>POLICY_NAME</key>
 		<string>Install Latest %NAME%</string>
-		<key>POLICY_RUN_COMMAND</key>
-		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>Policy-install-latest.xml</string>
+		<string>Policy-install-latest-featured.xml</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
 		<string>Reinstall</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
