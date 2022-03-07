@@ -9,24 +9,26 @@
 	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
 	<key>Input</key>
 	<dict>
+		<key>NAME</key>
+		<string>Mozilla Firefox</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>AllDevices</string>
+		<string>"update-smart-%NAME%"</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroup-AllDevices.xml</string>
-		<key>INSTALL_BUTTON_TEXT</key>
-		<string>Install</string>
-		<key>NAME</key>
-		<string>Mozilla Firefox</string>
+		<string>SmartGroup-update-smart-regex.xml</string>
+		<key>TESTING_GROUP_NAME</key>
+		<string>Testing</string>
 		<key>POLICY_CATEGORY</key>
 		<string>AutoPKG</string>
 		<key>POLICY_NAME</key>
 		<string>Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>Policy-install-latest-featured.xml</string>
+		<key>INSTALL_BUTTON_TEXT</key>
+		<string>Install %version%</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
-		<string>Reinstall</string>
+		<string>Reinstall %version%</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
