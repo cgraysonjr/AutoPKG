@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of Firefox, creats a pkg and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
-	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
+	<string>com.github.cgraysonjr.jamf.Firefox</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
