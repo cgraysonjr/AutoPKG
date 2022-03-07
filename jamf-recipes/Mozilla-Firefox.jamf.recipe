@@ -12,9 +12,9 @@
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>AllComputers</string>
+		<string>SFDevices</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroup-AllComputers.xml</string>
+		<string>SmartGroup-SFDevices.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install</string>
 		<key>NAME</key>
