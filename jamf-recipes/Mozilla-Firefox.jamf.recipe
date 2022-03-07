@@ -6,15 +6,15 @@
 	<string>Downloads the latest version of Firefox, creats a pkg and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
-	<string>com.github.cgraysonjr.jamf.Firefox</string>
+	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>SFDevices</string>
+		<string>AllDevices</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroup-SFDevices.xml</string>
+		<string>SmartGroup-AllDevices.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install</string>
 		<key>NAME</key>
