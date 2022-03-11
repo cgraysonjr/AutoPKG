@@ -24,7 +24,7 @@
 		<key>POLICY_NAME</key>
 		<string>Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>Policy-install-latest-featured.xml</string>
+		<string>../Templates/Policy-install-latest-featured.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
