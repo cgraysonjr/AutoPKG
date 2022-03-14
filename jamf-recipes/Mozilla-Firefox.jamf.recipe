@@ -23,6 +23,8 @@
 		<string>AutoPKG</string>
 		<key>POLICY_NAME</key>
 		<string>Install Latest %NAME%</string>
+		<key>POLICY_RUN_COMMAND</key>
+		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/Policy-install-latest.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
