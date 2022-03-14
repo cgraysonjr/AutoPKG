@@ -10,6 +10,8 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
+		<string>MozillaFirefox</string>
+		<key>NAME_DISPLAY</key>
 		<string>Mozilla Firefox</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
@@ -34,9 +36,9 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>%NAME%</string>
+		<string>%NAME_DISPLAY%</string>
 		<key>SELF_SERVICE_ICON</key>
-		<string>%RECIPE_DIR%/logos/Mozilla-Firefox.png</string>
+		<string>%RECIPE_DIR%/logos/%NAME%.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
