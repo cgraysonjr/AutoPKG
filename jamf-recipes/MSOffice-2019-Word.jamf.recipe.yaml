@@ -5,17 +5,17 @@ ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
 
 Input:
     CHANNEL: Production
-    LOCALE_ID: '1033'
+    LOCALE_ID: "1033"
     NAME: MSOffice2019Word
     NAME_DISPLAY: Microsoft Word
     PRODUCT: Word2019
     VERSION: latest
     CATEGORY: Microsoft
     GROUP_NAME: "update-smart-%NAME%"
-    GROUP_TEMPLATE: %RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml
+    GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
     TESTING_GROUP_NAME: Testing
     POLICY_CATEGORY: AutoPKG
-    POLICY_TEMPLATE: %RECIPE_DIR%/Templates/Policy-install-latest.xml
+    POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
     POLICY_NAME: "Install Latest %NAME_DISPLAY%"
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME_DISPLAY%"
     SELF_SERVICE_DESCRIPTION: Microsoft Word is a popular and powerful word processing app
