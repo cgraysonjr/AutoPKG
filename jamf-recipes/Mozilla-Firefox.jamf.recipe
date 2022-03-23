@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Mozilla Firefox, creats a pkg and uploads it to the connected JAMF repository.
+	<string>Downloads the latest version of Mozilla Firefox EN Edition, creates a pkg and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
 	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>

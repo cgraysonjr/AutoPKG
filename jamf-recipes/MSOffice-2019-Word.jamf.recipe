@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Google Chrome Universal Edition, creates a pkg and uploads it to the connected JAMF repository.
+	<string>Downloads the latest version of unlicensed version of Microsft Word, creates a pkg and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
-	<string>com.github.cgraysonjr.jamf.Google-Chrome</string>
+	<string>com.github.cgraysonjr.jamf.MSOffice-Word</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>GoogleChrome</string>
+		<string>MSOfficeWord</string>
 		<key>NAME_DISPLAY</key>
-		<string>Google Chrome</string>
+		<string>Microsoft Word</string>
 		<key>CATEGORY</key>
-		<string>Browser</string>
+		<string>Microsoft</string>
 		<key>GROUP_NAME</key>
 		<string>update-smart-%NAME%</string>
 		<key>GROUP_TEMPLATE</key>
