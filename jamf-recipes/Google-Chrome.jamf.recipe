@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Mozilla Firefox, creats a pkg and uploads it to the connected JAMF repository.
+	<string>Downloads the latest version of Google Chrome, creats a pkg and uploads it to the connected JAMF repository.
 </string>
 	<key>Identifier</key>
-	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
+	<string>com.github.cgraysonjr.jamf.Google-Chrome</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>MozillaFirefox</string>
+		<string>GoogleChrome</string>
 		<key>NAME_DISPLAY</key>
-		<string>Mozilla Firefox</string>
+		<string>Google Chrome</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
@@ -34,7 +34,7 @@
 		<key>REINSTALL_BUTTON_TEXT</key>
 		<string>Reinstall</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Mozilla Firefox is a free and open source web browser.</string>
+		<string>Google Chrome is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
 		<string>%NAME_DISPLAY%</string>
 		<key>SELF_SERVICE_ICON</key>
@@ -43,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.pkg.Firefox_EN</string>
+	<string>com.github.autopkg.pkg.googlechrome</string>
 	<key>Process</key>
 	<array>
 		<dict>
