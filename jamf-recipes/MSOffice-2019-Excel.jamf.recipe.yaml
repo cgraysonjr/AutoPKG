@@ -17,6 +17,7 @@ Input:
     POLICY_CATEGORY: AutoPKG
     POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
     POLICY_NAME: "Install Latest %NAME_DISPLAY%"
+    POLICY_RUN_COMMAND: "chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME_DISPLAY%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME_DISPLAY%.&quot;"
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME_DISPLAY%"
     SELF_SERVICE_DESCRIPTION: Microsoft Excel is a spreadsheet application featuring calculation, graphing tools, PivotTables, and a macro programming language called Visual Basic for Applications.
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME%.png"
