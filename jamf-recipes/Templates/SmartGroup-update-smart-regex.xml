@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <computer_group>
 	<name>%GROUP_NAME%</name>
-	<application_title>%Application_Title%</application_title>
 	<is_smart>true</is_smart>
 	<criteria>
 		<criterion>
@@ -9,7 +8,7 @@
 			<priority>0</priority>
 			<and_or>and</and_or>
 			<search_type>is</search_type>
-			<value>%application_title%</value>
+			<value>%Application_Title%</value>
 			<opening_paren>true</opening_paren>
 			<closing_paren>false</closing_paren>
 		</criterion>
@@ -36,7 +35,7 @@
 			<priority>3</priority>
 			<and_or>or</and_or>
 			<search_type>is not</search_type>
-			<value>%application_title%</value>
+			<value>%Application_Title%</value>
 			<opening_paren>false</opening_paren>
 			<closing_paren>true</closing_paren>
 		</criterion>

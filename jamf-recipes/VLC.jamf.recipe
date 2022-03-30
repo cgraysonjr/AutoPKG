@@ -13,6 +13,8 @@
 		<string>VLC</string>
 		<key>NAME_DISPLAY</key>
 		<string>VLC Media Player</string>
+		<key>Application_Title</key>
+		<string>%NAME%</string>
 		<key>CATEGORY</key>
 		<string>Audio and Visual</string>
 		<key>GROUP_NAME</key>

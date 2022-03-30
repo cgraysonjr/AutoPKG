@@ -8,6 +8,7 @@ Input:
     LOCALE_ID: "1033"
     NAME: MSOffice2019Word
     NAME_DISPLAY: Microsoft Word
+    Application_Title: %NAME_DISPLAY%
     PRODUCT: Word2019
     VERSION: latest
     CATEGORY: Microsoft
