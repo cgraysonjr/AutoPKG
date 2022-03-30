@@ -8,7 +8,7 @@
 			<priority>0</priority>
 			<and_or>and</and_or>
 			<search_type>is</search_type>
-			<value>%Application_Title%</value>
+			<value>%Application_Title%.app</value>
 			<opening_paren>true</opening_paren>
 			<closing_paren>false</closing_paren>
 		</criterion>
@@ -35,7 +35,7 @@
 			<priority>3</priority>
 			<and_or>or</and_or>
 			<search_type>is not</search_type>
-			<value>%Application_Title%</value>
+			<value>%Application_Title%.app</value>
 			<opening_paren>false</opening_paren>
 			<closing_paren>true</closing_paren>
 		</criterion>
