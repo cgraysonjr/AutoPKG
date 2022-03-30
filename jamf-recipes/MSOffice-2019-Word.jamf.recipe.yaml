@@ -17,7 +17,7 @@ Input:
     POLICY_CATEGORY: AutoPKG
     POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
     POLICY_NAME: "Install Latest %NAME_DISPLAY%"
-    POLICY_RUN_COMMAND:
+    POLICY_RUN_COMMAND: ""
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME_DISPLAY%"
     SELF_SERVICE_DESCRIPTION: Microsoft Word is a popular and powerful word processing app
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME%.png"
