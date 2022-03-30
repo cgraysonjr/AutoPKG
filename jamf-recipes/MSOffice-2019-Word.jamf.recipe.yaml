@@ -11,7 +11,7 @@ Input:
     PRODUCT: Word2019
     VERSION: latest
     CATEGORY: Microsoft
-    GROUP_NAME: "update-smart-%NAME_DISPLAY%"
+    GROUP_NAME: "update-smart-%NAME%"
     GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
     TESTING_GROUP_NAME: Testing
     POLICY_CATEGORY: AutoPKG
