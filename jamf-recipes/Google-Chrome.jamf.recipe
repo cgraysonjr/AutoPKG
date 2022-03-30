@@ -13,6 +13,8 @@
 		<string>GoogleChrome</string>
 		<key>NAME_DISPLAY</key>
 		<string>Google Chrome</string>
+		<key>Application_Title</key>
+		<string>%NAME_DISPLAY%</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>

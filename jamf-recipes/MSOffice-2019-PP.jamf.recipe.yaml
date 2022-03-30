@@ -8,6 +8,7 @@ Input:
     LOCALE_ID: "1033"
     NAME: MSOffice2019PP
     NAME_DISPLAY: Microsoft PowerPoint
+    Application_Title: "%NAME_DISPLAY%"
     PRODUCT: PowerPoint2019
     VERSION: latest
     CATEGORY: Microsoft
