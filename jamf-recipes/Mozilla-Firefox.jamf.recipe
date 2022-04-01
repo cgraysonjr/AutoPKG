@@ -30,9 +30,9 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/Policy-install-latest.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
-		<string>Install</string>
+		<string>Install %version%</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
-		<string>Reinstall</string>
+		<string>Reinstall %version%</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>

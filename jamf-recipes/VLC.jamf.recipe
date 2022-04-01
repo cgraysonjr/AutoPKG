@@ -11,14 +11,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>VLC</string>
-		<key>NAME_DISPLAY</key>
-		<string>VLC Media Player</string>
-		<key>Application_Title</key>
+		<key>NAME_DETAIL</key>
 		<string>%NAME%</string>
 		<key>CATEGORY</key>
 		<string>Audio and Visual</string>
 		<key>GROUP_NAME</key>
-		<string>update-smart-%NAME%</string>
+		<string>update-smart-%NAME_DETAIL%</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml</string>
 		<key>TESTING_GROUP_NAME</key>
@@ -26,21 +24,21 @@
 		<key>POLICY_CATEGORY</key>
 		<string>AutoPKG</string>
 		<key>POLICY_NAME</key>
-		<string>Install Latest %NAME_DISPLAY%</string>
+		<string>Install Latest %NAME_DETAIL%</string>
 		<key>POLICY_RUN_COMMAND</key>
 		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/Policy-install-latest.xml</string>
 		<key>INSTALL_BUTTON_TEXT</key>
-		<string>Install</string>
+		<string>Install %version%</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
-		<string>Reinstall</string>
+		<string>Reinstall %version%</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>%NAME_DISPLAY%</string>
+		<string>Install Latest %NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
-		<string>%RECIPE_DIR%/logos/%NAME%.png</string>
+		<string>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
