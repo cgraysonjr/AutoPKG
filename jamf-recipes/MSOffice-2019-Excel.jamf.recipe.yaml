@@ -6,8 +6,8 @@ ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
 Input:
     CHANNEL: Production
     LOCALE_ID: "1033"
-    NAME: MSOffice2019Excel
-    NAME_DETAIL: Microsoft Excel
+    NAME: Microsoft Excel
+    NAME_DETAIL: MSOffice2019Excel
     PRODUCT: Excel2019
     VERSION: latest
     CATEGORY: Microsoft
