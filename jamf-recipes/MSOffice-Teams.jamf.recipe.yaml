@@ -6,20 +6,21 @@ ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
 Input:
     CHANNEL: Production
     LOCALE_ID: "1033"
-    NAME: MSOfficeTeams
-    NAME_DISPLAY: Microsoft Word
+    NAME: Microsoft Teams
+    NAME_DISPLAY: MSOfficeTeams
     PRODUCT: Teams
     VERSION: latest
     CATEGORY: Microsoft
-    GROUP_NAME: "update-smart-%NAME%"
+    GROUP_NAME: "update-smart-%NAME_DETAIL%"
     GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
     TESTING_GROUP_NAME: Testing
     POLICY_CATEGORY: AutoPKG
     POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
-    POLICY_NAME: "Install Latest %NAME_DISPLAY%"
-    SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME_DISPLAY%"
+    POLICY_NAME: "Install Latest %NAME_DETAIL%"
+    POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
+    SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
     SELF_SERVICE_DESCRIPTION: Like Zoom, but owned by Microsoft.
-    SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME%.png"
+    SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
     INSTALL_BUTTON_TEXT: "Install %version%"
     REINSTALL_BUTTON_TEXT: "Install %version%"
     UPDATE_PREDICATE: "pkg_uploaded == True"
