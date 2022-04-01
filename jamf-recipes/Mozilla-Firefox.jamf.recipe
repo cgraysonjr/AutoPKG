@@ -10,15 +10,13 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>MozillaFirefox</string>
-		<key>NAME_DISPLAY</key>
 		<string>Mozilla Firefox</string>
-		<key>Application_Title</key>
-		<string>%NAME_DISPLAY%</string>
+		<key>NAME_DETAIL</key>
+		<string>MozillaFirefox</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>update-smart-%NAME%</string>
+		<string>update-smart-%NAME_DETAIL%</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml</string>
 		<key>TESTING_GROUP_NAME</key>
@@ -26,7 +24,7 @@
 		<key>POLICY_CATEGORY</key>
 		<string>AutoPKG</string>
 		<key>POLICY_NAME</key>
-		<string>Install Latest %NAME_DISPLAY%</string>
+		<string>Install Latest %NAME_DETAIL%</string>
 		<key>POLICY_RUN_COMMAND</key>
 		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
@@ -38,9 +36,9 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>%NAME_DISPLAY%</string>
+		<string>Install Latest %NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
-		<string>%RECIPE_DIR%/logos/%NAME%.png</string>
+		<string>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
