@@ -10,7 +10,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Mozilla Firefox</string>
+		<string>Firefox</string>
 		<key>NAME_DETAIL</key>
 		<string>MozillaFirefox</string>
 		<key>CATEGORY</key>
@@ -36,7 +36,7 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>Install Latest %NAME%</string>
+		<string>Install Latest Mozilla %NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</string>
 	</dict>
