@@ -1,0 +1,59 @@
+Identifier: com.github.cgraysonjr.jamf.FileZilla
+MinimumVersion: '2.3'
+
+ParentRecipe: com.github.grahampugh.recipes.pkg.FileZilla
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.grahampugh.recipes.download.FileZilla:
+      git_hash: f3ced6d4b6fdd969f74b7a572239382e1047f9a3
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/FileZilla/FileZilla-stable.download.recipe.yaml
+      sha256_hash: e5cdb0ca38dd9d5c2a52707c8b01778eac7456327fe7f43603303c12396265ce
+    com.github.grahampugh.recipes.pkg.FileZilla:
+      git_hash: bbb50d0b968fc8ee93029be66c5dd866d374d3a3
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/FileZilla/FileZilla-stable.pkg.recipe.yaml
+      sha256_hash: b776ba669f76ebed20fca220d2f506dd68969e80763f4867b60efe5ddabe4212
+      
+    Input:
+        BUNDLE_ID: org.filezilla-project.filezilla.pkg
+        NAME: FileZilla
+        NAME_DETAIL: "%NAME%"
+        SEARCH_URL: https://filezilla-project.org/download.php?show_all=1
+        CATEGORY: Productivity
+        GROUP_NAME: "update-smart-%NAME_DETAIL%"
+        GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
+        TESTING_GROUP_NAME: AutoPKG
+        POLICY_CATEGORY: AutoPKG
+        POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
+        POLICY_NAME: "Install Latest %NAME_DETAIL%"
+        POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
+        SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
+        SELF_SERVICE_DESCRIPTION: VLC media player is a free and open-source, portable, cross-platform media player software and streaming media server developed by the VideoLAN project. 
+        SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
+        INSTALL_BUTTON_TEXT: "Install %version%"
+        REINSTALL_BUTTON_TEXT: "Install %version%"
+        UPDATE_PREDICATE: "pkg_uploaded == False"
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%GROUP_TEMPLATE%"
+      computergroup_name: "%GROUP_NAME%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%POLICY_TEMPLATE%"
+      policy_name: "%POLICY_NAME%"
+      icon: "%SELF_SERVICE_ICON%"
