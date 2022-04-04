@@ -28,7 +28,7 @@ Input:
     POLICY_NAME: "Install Latest %NAME_DETAIL%"
     POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
-    SELF_SERVICE_DESCRIPTION: VLC media player is a free and open-source, portable, cross-platform media player software and streaming media server developed by the VideoLAN project. 
+    SELF_SERVICE_DESCRIPTION: FileZilla Client is a free, open source FTP client. It supports FTP, SFTP, and FTPS (FTP over SSL/TLS).
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
     INSTALL_BUTTON_TEXT: "Install %version%"
     REINSTALL_BUTTON_TEXT: "Install %version%"
