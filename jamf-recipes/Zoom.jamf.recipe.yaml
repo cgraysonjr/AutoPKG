@@ -13,7 +13,7 @@ Input:
     POLICY_CATEGORY: AutoPKG
     POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
     POLICY_NAME: "Install Latest %NAME_DETAIL%"
-    POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
+    POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME_DETAIL%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME_DETAIL%.&quot;
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
     SELF_SERVICE_DESCRIPTION: The Zoom app provides cloud-hosted video conferencing, plus online meetings and group messaging.
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
