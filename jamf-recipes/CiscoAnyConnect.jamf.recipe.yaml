@@ -1,25 +1,24 @@
-Identifier: com.github.cgraysonjr.jamf.FileZilla
+Identifier: com.github.cgraysonjr.jamf.CiscoAnyConnect
 MinimumVersion: '2.3'
 
-ParentRecipe: com.github.grahampugh.recipes.pkg.FileZilla
-ParentRecipeTrustInfo:
-  non_core_processors: {}
-  parent_recipes:
-    com.github.grahampugh.recipes.download.FileZilla:
-      git_hash: f3ced6d4b6fdd969f74b7a572239382e1047f9a3
-      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/FileZilla/FileZilla-stable.download.recipe.yaml
-      sha256_hash: e5cdb0ca38dd9d5c2a52707c8b01778eac7456327fe7f43603303c12396265ce
-    com.github.grahampugh.recipes.pkg.FileZilla:
+    ParentRecipe: com.github.grahampugh.recipes.pkg.CiscoAnyConnect
+    ParentRecipeTrustInfo:
+    non_core_processors:
+    com.github.grahampugh.recipes.commonprocessors/ChoicesXMLGenerator:
+      git_hash: 4fc29d24800f330809a7fe42dc1a680561f1ffe6
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/CommonProcessors/ChoicesXMLGenerator.py
+      sha256_hash: 14b84ff07ce6b4cb2b5944d69b523a422d5b6b4e91a1638f18f726364ede2845
+    parent_recipes:
+    com.github.grahampugh.recipes.pkg.CiscoAnyConnect:
       git_hash: bbb50d0b968fc8ee93029be66c5dd866d374d3a3
-      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/FileZilla/FileZilla-stable.pkg.recipe.yaml
-      sha256_hash: b776ba669f76ebed20fca220d2f506dd68969e80763f4867b60efe5ddabe4212
-      
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/CiscoAnyConnect/CiscoAnyConnect.pkg.recipe.yaml
+      sha256_hash: 1f25da5e731a74f22fed3d82313857bdeb448756728e44f5c353167027dc0cdb
+
 Input:
-    BUNDLE_ID: org.filezilla-project.filezilla.pkg
-    NAME: FileZilla
-    NAME_DETAIL: "%NAME%"
-    SEARCH_URL: https://filezilla-project.org/download.php?show_all=1
-    CATEGORY: Productivity
+    NAME: Cisco AnyConnect Secure Mobility Client
+    NAME_DETAIL: "CiscoAnyConnectSMC"
+    VPN_XML: example.xml
+    CATEGORY: Virtual Computing
     GROUP_NAME: "update-smart-%NAME_DETAIL%"
     GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
     TESTING_GROUP_NAME: Testing
@@ -28,7 +27,7 @@ Input:
     POLICY_NAME: "Install Latest %NAME_DETAIL%"
     POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
-    SELF_SERVICE_DESCRIPTION: VLC media player is a free and open-source, portable, cross-platform media player software and streaming media server developed by the VideoLAN project. 
+    SELF_SERVICE_DESCRIPTION: Cisco AnyConnect Secure Mobility Client empowers remote workers with frictionless, highly secure access to the enterprise network from any device, at any time, in any location while protecting the organization.
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
     INSTALL_BUTTON_TEXT: "Install %version%"
     REINSTALL_BUTTON_TEXT: "Install %version%"
