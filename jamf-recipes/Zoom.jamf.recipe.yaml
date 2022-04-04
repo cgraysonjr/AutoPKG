@@ -4,13 +4,9 @@ MinimumVersion: '2.3'
 ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
 
 Input:
-    CHANNEL: Production
-    LOCALE_ID: "1033"
-    NAME: Microsoft Teams
-    NAME_DISPLAY: MSOfficeTeams
-    PRODUCT: Teams
-    VERSION: latest
-    CATEGORY: Microsoft
+    NAME: Zoom
+    NAME_DETAIL: "%NAME%"
+    CATEGORY: Audio and Visual
     GROUP_NAME: "update-smart-%NAME_DETAIL%"
     GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
     TESTING_GROUP_NAME: Testing
