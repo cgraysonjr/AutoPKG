@@ -7,7 +7,7 @@ Input:
     CHANNEL: Production
     LOCALE_ID: "1033"
     NAME: Microsoft Teams
-    NAME_DETAIL: MSOfficeTeams
+    NAME_DISPLAY: MSOfficeTeams
     PRODUCT: Teams
     VERSION: latest
     CATEGORY: Microsoft
@@ -19,7 +19,7 @@ Input:
     POLICY_NAME: "Install Latest %NAME_DETAIL%"
     POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
-    SELF_SERVICE_DESCRIPTION: Like Zoom, but owned by Microsoft.
+    SELF_SERVICE_DESCRIPTION: The Zoom app provides cloud-hosted video conferencing, plus online meetings and group messaging.
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
     INSTALL_BUTTON_TEXT: "Install %version%"
     REINSTALL_BUTTON_TEXT: "Install %version%"
