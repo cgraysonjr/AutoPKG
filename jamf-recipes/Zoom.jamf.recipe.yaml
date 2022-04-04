@@ -1,7 +1,7 @@
-Identifier: com.github.cgraysonjr.jamf.MSOffice-Teams
+Identifier: com.github.cgraysonjr.jamf.zoom
 MinimumVersion: '2.3'
 
-ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
+ParentRecipe: com.github.homebysix.pkg.Zoom
 
 Input:
     NAME: Zoom
