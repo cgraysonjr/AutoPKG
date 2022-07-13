@@ -21,8 +21,8 @@ Input:
     SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
     SELF_SERVICE_DESCRIPTION: Microsoft Excel is a spreadsheet application featuring calculation, graphing tools, PivotTables, and a macro programming language called Visual Basic for Applications.
     SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
-    INSTALL_BUTTON_TEXT: "Install %version%"
-    REINSTALL_BUTTON_TEXT: "Install %version%"
+    INSTALL_BUTTON_TEXT: "Install %VERSION%"
+    REINSTALL_BUTTON_TEXT: "Install %VERSION%"
     UPDATE_PREDICATE: "pkg_uploaded == True"
 
 Process:
