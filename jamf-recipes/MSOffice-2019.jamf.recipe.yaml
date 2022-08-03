@@ -8,7 +8,7 @@ Input:
     LOCALE_ID: "1033"
     NAME: Microsoft Office Business Pro
     NAME_DETAIL: MSOffice2019ProPlus
-    PRODUCT: ProPlus2019Volume
+    PRODUCT: ProPlus2019
     VERSION: latest
     CATEGORY: Microsoft
     GROUP_NAME: "update-smart-%NAME_DETAIL%"
