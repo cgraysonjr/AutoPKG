@@ -1,0 +1,50 @@
+Identifier: com.github.cgraysonjr.jamf.MSOffice-2019-Excel
+MinimumVersion: '2.3'
+
+ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
+
+Input:
+    CHANNEL: Production
+    LOCALE_ID: "1033"
+    NAME: Microsoft Office Business Pro
+    NAME_DETAIL: MSOffice2019ProPlus
+    PRODUCT: ProPlus2019Volume
+    VERSION: latest
+    CATEGORY: Microsoft
+    GROUP_NAME: "update-smart-%NAME_DETAIL%"
+    GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
+    TESTING_GROUP_NAME: Testing
+    POLICY_CATEGORY: AutoPKG
+    POLICY_TEMPLATE: "%RECIPE_DIR%/Templates/Policy-install-latest.xml"
+    POLICY_NAME: "Install Latest %NAME_DETAIL%"
+    POLICY_RUN_COMMAND: chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;
+    SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
+    SELF_SERVICE_DESCRIPTION: The full suite of Microsoft Office Products.
+    SELF_SERVICE_ICON: "%RECIPE_DIR%/logos/%NAME_DETAIL%.png"
+    INSTALL_BUTTON_TEXT: "Install %VERSION%"
+    REINSTALL_BUTTON_TEXT: "Install %VERSION%"
+    UPDATE_PREDICATE: "pkg_uploaded == True"
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  # - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  # - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    # Arguments:
+      # computergroup_template: "%GROUP_TEMPLATE%"
+      # computergroup_name: "%GROUP_NAME%"
+
+  # - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    # Arguments:
+      # policy_template: "%POLICY_TEMPLATE%"
+      # policy_name: "%POLICY_NAME%"
+      # icon: "%SELF_SERVICE_ICON%"
