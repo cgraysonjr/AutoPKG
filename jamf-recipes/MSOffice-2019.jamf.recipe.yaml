@@ -1,4 +1,4 @@
-Identifier: com.github.cgraysonjr.jamf.MSOffice-2019-Excel
+Identifier: com.github.cgraysonjr.jamf.MSOffice-2019
 MinimumVersion: '2.3'
 
 ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
