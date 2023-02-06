@@ -1,11 +1,20 @@
 ﻿#!/bin/bash
 
-#######################
-###Admin credentials###
-#######################
+###########################################################################################
+#JAMF Script. Requires interaction with a JAMF policy for functionality
+###########################################################################################
+
+###########################################################################################
+#Pulls the administrator credentials from JAMF, assuming the account has a Secure Token 
+#to access.
+###########################################################################################
 adminUser=$4
 adminPassword=$5
 
+###########################################################################################
+#Function consoleUser: 
+#returns the console\user name of the logged in user
+###########################################################################################
 consoleUser() {
 	echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /loginwindow/ { print $3 }'
 }
@@ -30,7 +39,7 @@ displayfortext() { # $1: message $2: default text
 }
 
 ##############################################################
-###This will store the logged in user's name to a variable.###
+#Get the logged user's console\user name and store in in a variable
 ##############################################################
 userName=$(consoleUser)
 
