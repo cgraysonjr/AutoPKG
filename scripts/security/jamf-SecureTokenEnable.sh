@@ -6,23 +6,38 @@
 adminUser=$4
 adminPassword=$5
 
+consoleUser() {
+	echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /loginwindow/ { print $3 }'
+}
+
+displayfortext() { # $1: message $2: default text
+	message=${1:-"Message"}
+	defaultvalue=${2:-""}
+	user=$(consoleUser)
+    if [[ $user != "" ]]; then
+        uid=$(id -u "$user")
+	
+	    launchctl asuser $uid /usr/bin/osascript <<-EndOfScript
+			text returned of ¬
+				(display dialog "$message" ¬
+					with hidden answer default answer "$defaultvalue" ¬
+					buttons {"OK"} ¬
+					default button "OK")
+			EndOfScript
+	else
+	    exit 1
+	fi
+}
+
 ##############################################################
 ###This will store the logged in user's name to a variable.###
 ##############################################################
-userName=$(osascript -e '
-tell application "Finder"
-   display dialog "Please enter your username." with hidden answer default answer ""
-   set userPassword to the (text returned of the result)
-end tell')
+userName=$(consoleUser)
 
 ##############################################################################
 ###This will prompt the user for their password and store it in a variable.###
 ##############################################################################
-userPassword=$(osascript -e '
-tell application "Finder"
-   display dialog "Please enter your Computer password." with hidden answer default answer ""
-   set userPassword to the (text returned of the result)
-end tell')
+userPassword=$(displayfortext "Please enter password for user: $userName" "")
 
 #####################################################################################################
 ###Store the output of the sysadminctl command into a variable to use it for error handling later.###
