@@ -1,11 +1,11 @@
 Identifier: com.github.cgraysonjr.jamf.zoom
 MinimumVersion: '2.3'
 
-ParentRecipe: com.github.homebysix.pkg.Zoom
-
 Input:
     NAME: Zoom
     NAME_DETAIL: "%NAME%"
+    BUNDLE_ID: us.zoom.xos
+    DOWNLOAD_URL: https://zoom.us/client/latest/ZoomInstallerIT.pkg
     CATEGORY: Audio and Visual
     GROUP_NAME: "update-smart-%NAME_DETAIL%"
     GROUP_TEMPLATE: "%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml"
