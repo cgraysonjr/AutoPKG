@@ -3,3 +3,6 @@
 /usr/bin/security authorizationdb read  system.preferences.energysaver > /tmp/system.preferences.energysaver.plist
 /usr/bin/defaults write /tmp/system.preferences.energysaver.plist group everyone
 /usr/bin/security authorizationdb write system.preferences.energysaver < /tmp/system.preferences.energysaver.plist
+
+# unlock battery: 
+security authorizationdb write system.preferences.battery allow
