@@ -1,12 +1,4 @@
 ﻿#!/bin/bash
 
-accountCheck=("itwsupport")
-
-node=${2:-"/Local/Default"}
-
-for u in $(dscl "$node" list /Users ); do
-	echo $u
-	#/usr/sbin/dseditgroup -o edit -d $u -t user admin
-fi
-
-done
+accountCheck=("root" $4 $5 $6)
+adminsLocal=$(dscacheutil -q group -a name admin | awk '/users: / {$1=""; print $0}')
