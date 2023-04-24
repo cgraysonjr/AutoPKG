@@ -10,4 +10,3 @@
 /usr/sbin/dseditgroup -o edit -n /Local/Default -a everyone -t group lpadmin
 # Adds the Everyone group to the lpadmin group
 /usr/sbin/dseditgroup -o edit -n /Local/Default -a everyone -t group _lpadmin
-exit 0;
