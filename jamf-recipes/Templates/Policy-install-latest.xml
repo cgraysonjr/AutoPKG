@@ -29,6 +29,7 @@
 	</scripts>
 	<self_service>
 		<use_for_self_service>true</use_for_self_service>
+		<feature_on_main_page>%FEATURE_BOOL%</feature_on_main_page>
 		<install_button_text>%INSTALL_BUTTON_TEXT%</install_button_text>
 		<reinstall_button_text>%REINSTALL_BUTTON_TEXT%</reinstall_button_text>
 		<self_service_display_name>%SELF_SERVICE_DISPLAY_NAME%</self_service_display_name>
