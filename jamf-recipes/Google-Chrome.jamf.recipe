@@ -27,7 +27,7 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/Policy-install-latest.xml</string>
 		<key>FEATURE_BOOL</key>
-		<boolean>true</boolean>
+		<string>true</string>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install %version%</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
