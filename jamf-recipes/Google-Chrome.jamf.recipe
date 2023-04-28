@@ -15,13 +15,13 @@
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>update-smart-%NAME_DETAIL%</string>
+		<string>All Managed Clients</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/SmartGroup-AllManagedClients</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Browser</string>
 		<key>POLICY_NAME</key>
-		<string>%NAME_DETAIL%</string>
+		<string>AUTOPKG-%NAME_DETAIL%</string>
 		<key>POLICY_RUN_COMMAND</key>
 		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
