@@ -3,28 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Mozilla Firefox EN Edition, creates a pkg and uploads it to the connected JAMF repository.
-</string>
+	<string>Downloads the latest version of Mozilla Firefox EN Edition, creates a pkg and uploads it to the connected JAMF repository. Creates a policy and assigns it to the All MAnaged Clients Smart Group.</string>
 	<key>Identifier</key>
 	<string>com.github.cgraysonjr.jamf.Mozilla-Firefox</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Firefox</string>
+		<string>Mozilla Firefox</string>
 		<key>NAME_DETAIL</key>
 		<string>MozillaFirefox</string>
 		<key>CATEGORY</key>
 		<string>Browser</string>
 		<key>GROUP_NAME</key>
-		<string>update-smart-%NAME_DETAIL%</string>
+		<string>All Managed Clients</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml</string>
-		<key>TESTING_GROUP_NAME</key>
-		<string>Testing</string>
+		<string>%RECIPE_DIR%/Templates/SmartGroup-AllManagedClients</string>
 		<key>POLICY_CATEGORY</key>
-		<string>AutoPKG</string>
+		<string>Browser</string>
 		<key>POLICY_NAME</key>
-		<string>Install Latest %NAME_DETAIL%</string>
+		<string>AUTOPKG-%NAME_DETAIL%</string>
 		<key>POLICY_RUN_COMMAND</key>
 		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
@@ -36,7 +33,7 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Mozilla Firefox is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>Install Latest Mozilla %NAME%</string>
+		<string>%NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</string>
 	</dict>
