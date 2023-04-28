@@ -35,7 +35,7 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Google Chrome is a free and open source web browser.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
-		<string>Install Latest %NAME%</string>
+		<string>%NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</string>
 	</dict>
