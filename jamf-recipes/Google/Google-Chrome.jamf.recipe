@@ -18,17 +18,17 @@
 		<key>GROUP_NAME</key>
 		<string>update-smart-%NAME_DETAIL%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml</string>
-		<key>TESTING_GROUP_NAME</key>
-		<string>Testing</string>
+		<string>%RECIPE_DIR%/Templates/SmartGroup-AllManagedClients</string>
 		<key>POLICY_CATEGORY</key>
-		<string>AutoPKG</string>
+		<string>Browser</string>
 		<key>POLICY_NAME</key>
-		<string>Install Latest %NAME_DETAIL%</string>
+		<string>%NAME_DETAIL%</string>
 		<key>POLICY_RUN_COMMAND</key>
 		<string>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>%RECIPE_DIR%/Templates/Policy-install-latest.xml</string>
+		<key>FEATURE_BOOL</key>
+		<bool>true</bool>
 		<key>INSTALL_BUTTON_TEXT</key>
 		<string>Install %version%</string>
 		<key>REINSTALL_BUTTON_TEXT</key>
@@ -58,21 +58,6 @@
 		<dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>computergroup_name</key>
-				<string>%GROUP_NAME%</string>
-				<key>computergroup_template</key>
-				<string>%GROUP_TEMPLATE%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
