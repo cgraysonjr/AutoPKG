@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Google Chrome Universal Edition, creates a pkg and uploads it to the connected JAMF repository.</string>
+	<string>Downloads the latest version of Google Chrome Universal Edition, creates a pkg and uploads it to the connected JAMF repository. Creates a policy and assigns it to the All MAnaged Clients Smart Group.</string>
 	<key>Identifier</key>
 	<string>com.github.cgraysonjr.jamf.Google-Chrome</string>
 	<key>Input</key>
