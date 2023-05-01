@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <computer_group>
-	<name>SFDevices</name>
+	<name>All Managed Clients - EMS</name>
 	<is_smart>true</is_smart>
 	<criteria>
 	</criteria>
