@@ -1,12 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
-# Check if the devices is a M-series processor
-if [[ !($(uname -m) == 'arm64') ]]; then
-	# If device isn't M series, set results to "Not Applicable"
-	result="Not Applicable"
-elif [[/usr/bin/pgrep oahd >/dev/null 2>&1]]; then
-	result="Installed"
+# If cpu is Apple branded, use arch binary to check if x86_64 code can run
+if [[ "$(sysctl -n machdep.cpu.brand_string)" == *'Apple'* ]]; then
+    if arch -x86_64 /usr/bin/true 2> /dev/null; then
+        result="Installed"
+    else
+        result="Missing"
+    fi
 else
-	result="Not Installed"
+    result="Ineligible"
 fi
+
 echo "<result>$result</result>"
