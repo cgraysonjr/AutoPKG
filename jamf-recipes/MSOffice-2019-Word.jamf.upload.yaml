@@ -1,0 +1,25 @@
+Identifier: com.github.cgraysonjr.jamf.MSOffice-2019-Word.upload
+MinimumVersion: '2.3'
+
+ParentRecipe: com.github.autopkg.download.MSOfficeMacProduct
+
+Input:
+    CHANNEL: Production
+    LOCALE_ID: "1033"
+    NAME: Microsoft Word
+    NAME_DETAIL: MSOffice2019Word
+    PRODUCT: Word2019
+    VERSION: latest
+    CATEGORY: Microsoft
+    UPDATE_PREDICATE: "pkg_uploaded == True"
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
