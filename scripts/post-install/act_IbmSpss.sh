@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Script			: activate_spss
@@ -13,7 +13,7 @@
 
 # Default directory of IBM SPSS
 __dir_spss=/Applications/IBM\ SPSS\ Statistics
-__dir_spss_la=/SPSSStatistics.app/Contents/bin/
+__dir_spss_la=Resources/Activation
 
 # License for currently active SPSS
 __license_spss_29=""
