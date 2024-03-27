@@ -1,0 +1,40 @@
+<Identifier>com.github.cgraysonjr.jamf.MSOffice-2019</Identifier>
+<MinimumVersion>2.3</MinimumVersion>
+<ParentRecipe>com.github.autopkg.download.MSOfficeMacProduct</ParentRecipe>
+<Input>
+  <CHANNEL>Production</CHANNEL>
+  <LOCALE_ID>1033</LOCALE_ID>
+  <NAME>Microsoft Office Business Pro</NAME>
+  <NAME_DETAIL>MSOffice2019ProPlus</NAME_DETAIL>
+  <PRODUCT>ProPlus2019</PRODUCT>
+  <VERSION>latest</VERSION>
+  <CATEGORY>Microsoft</CATEGORY>
+  <GROUP_NAME>update-smart-%NAME_DETAIL%</GROUP_NAME>
+  <GROUP_TEMPLATE>%RECIPE_DIR%/Templates/SmartGroup-update-smart-regex.xml</GROUP_TEMPLATE>
+  <TESTING_GROUP_NAME>Testing</TESTING_GROUP_NAME>
+  <POLICY_CATEGORY>AutoPKG</POLICY_CATEGORY>
+  <POLICY_TEMPLATE>%RECIPE_DIR%/Templates/Policy-install-latest.xml</POLICY_TEMPLATE>
+  <POLICY_NAME>Install Latest %NAME_DETAIL%</POLICY_NAME>
+  <POLICY_RUN_COMMAND>chown -R &quot;$(stat -f%Su /dev/console):staff&quot; &quot;/Applications/%NAME%.app&quot; &amp;&amp; echo &quot;Corrected permissions for %NAME%.&quot;</POLICY_RUN_COMMAND>
+  <SELF_SERVICE_DISPLAY_NAME>Install Latest %NAME%</SELF_SERVICE_DISPLAY_NAME>
+  <SELF_SERVICE_DESCRIPTION>The full suite of Microsoft Office Products.</SELF_SERVICE_DESCRIPTION>
+  <SELF_SERVICE_ICON>%RECIPE_DIR%/logos/%NAME_DETAIL%.png</SELF_SERVICE_ICON>
+  <INSTALL_BUTTON_TEXT>Install %VERSION%</INSTALL_BUTTON_TEXT>
+  <REINSTALL_BUTTON_TEXT>Install %VERSION%</REINSTALL_BUTTON_TEXT>
+  <UPDATE_PREDICATE>pkg_uploaded == True</UPDATE_PREDICATE>
+</Input>
+<Process>
+  <Processor>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</Processor>
+  <Arguments>
+    <category_name>%CATEGORY%</category_name>
+  </Arguments>
+</Process>
+<Process>
+  <Processor>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</Processor>
+</Process>
+<Process>
+  <Processor>StopProcessingIf</Processor>
+  <Arguments>
+    <predicate>%UPDATE_PREDICATE%</predicate>
+  </Arguments>
+</Process>
