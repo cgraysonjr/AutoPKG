@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 
 #############################################
 # find the logged in user 					#
@@ -7,8 +7,8 @@
 currentUser=$(who | awk '/console/{print $1}')
 echo $currentUser
 
-# Kill Chrome if running
-killall "Firefox"
+# Kill Firefox if running
+killall "firefox"
 
-# Remove Chrome User Profile
+# Remove Firefox User Profile
 rm -r /Users/"$currentUser"/Library/Application\ Support/Firefox/
