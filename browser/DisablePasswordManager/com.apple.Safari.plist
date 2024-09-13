@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>AutoFillCreditCardData</key>
+		<false/>
+		<key>AutoFillFromAddressBook</key>
+		<false/>
+		<key>AutoFillMiscellaneousForms</key>
+		<false/>
+		<key>AutoFillPasswords</key>
+		<false/>
+		<key>DefaultBrowserPromptingState2</key>
+		<integer>1</integer>
+		<key>DefaultBrowserPromptingState3</key>
+		<integer>2</integer>
+		<key>DidShowWhatsNewInSafari</key>
+		<true/>
+		<key>DefaultBrowserSettingEnabled</key>
+		<false/>
+	</dict>
+</plist>
