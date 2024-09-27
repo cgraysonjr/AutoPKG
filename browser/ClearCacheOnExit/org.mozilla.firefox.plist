@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<!-- General Settings -->
+		<key>EnterprisePoliciesEnabled</key>
+		<true/>
+		<!-- Disable check for default browser on startup. -->
+		<key>DontCheckDefaultBrowser</key>
+		<true/>
+		
+		<!-- History and Cache Settings -->
+		<key>SanitizeOnShutdown</key>
+		<dict>
+		<key>Cache</key>
+		<true/>
+		<key>Cookies</key>
+		<true/>
+		<key>Downloads</key>
+		<true/>
+		<key>FormData</key>
+		<true/>
+		<key>History</key>
+		<true/>
+		<key>Sessions</key>
+		<true/>
+		<key>SiteSettings</key>
+		<true/>
+		<key>OfflineApps</key>
+		<true/>
+		<key>Locked</key>
+		<true/>
+		</dict>
+		<!-- Password Settings -->
+		<!-- If true, a Primary Password can’t be created. -->
+		<key>DisableMasterPasswordCreation</key>
+		<true/>
+		<!-- Do not allow passwords to be revealed in saved logins. -->
+		<key>DisablePasswordReveal</key>
+		<true/>
+		<!-- Enforce the setting to allow Firefox to offer to remember saved logins and passwords. Both true and false values are accepted. -->
+		<key>OfferToSaveLogins</key>
+		<false/>
+		<!-- Enable saving passwords to the password manager. -->
+		<key>PasswordManagerEnabled</key>
+		<false/>
+		
+		<!-- Form and Address Settings -->
+		<!-- Don’t remember search and form history. -->
+		<key>DisableFormHistory</key>
+		<true/>
+		<!-- Enable autofill for addresses. -->
+		<key>AutofillAddressEnabled</key>
+		<false/>
+		<!-- Enable autofill for payment methods. -->
+		<key>AutofillCreditCardEnabled</key>
+		<false/>
+	</dict>
+</plist>
